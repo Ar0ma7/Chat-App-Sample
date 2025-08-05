@@ -30,5 +30,6 @@ export const useSocket = () => {
     return () => {
       socket.disconnect();
     };
-  }, [setMyId, setReceiveMessages]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 };
