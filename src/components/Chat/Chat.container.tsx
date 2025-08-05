@@ -1,9 +1,9 @@
 import { useCallback, useMemo } from "react";
-import { Chat } from "./Chat";
-import { socket } from "../App/App.container";
+import { Chat } from "./Chat.ui";
 import { useAtom, useAtomValue } from "jotai";
 import { inputValueAtom, myIdAtom, receiveMessagesAtom } from "../../store";
 import dayjs from "dayjs";
+import { socket } from "../../hooks/useSocket";
 
 export const ChatContainer = () => {
   const [inputValue, setInputValue] = useAtom(inputValueAtom);

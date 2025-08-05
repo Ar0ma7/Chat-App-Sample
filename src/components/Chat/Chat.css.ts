@@ -9,14 +9,22 @@ export default {
       "input";
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-  `,
-  header: css`
-    grid-area: header;
+    height: 100%;
   `,
   messages: css`
     grid-area: messages;
+    overflow-y: auto;
+    padding: 10px;
   `,
-  input: css`
+  inputArea: css`
     grid-area: input;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: end;
+  `,
+  submitButton: css`
+    margin-bottom: 2px;
   `,
 };
