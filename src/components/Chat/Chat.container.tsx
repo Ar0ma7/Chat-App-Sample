@@ -39,6 +39,7 @@ export const ChatContainer = () => {
 
   return (
     <Chat
+      inputValue={inputValue}
       myId={myId}
       messages={sortedMessages}
       onChange={handleChange}

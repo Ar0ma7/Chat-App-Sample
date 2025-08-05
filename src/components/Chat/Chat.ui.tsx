@@ -6,6 +6,7 @@ import { MessageBalloon } from "../MessageBalloon";
 import dayjs from "dayjs";
 
 type Props = {
+  inputValue: string;
   myId: string;
   messages: Message[];
   onChange: (value: string) => void;
@@ -13,6 +14,7 @@ type Props = {
 };
 
 export const Chat: React.FC<Props> = ({
+  inputValue,
   myId,
   messages,
   onChange,
@@ -36,6 +38,7 @@ export const Chat: React.FC<Props> = ({
         <TextField
           id="outlined-textarea"
           multiline
+          value={inputValue}
           onChange={(event) => onChange(event.target.value)}
           onKeyDown={(event) =>
             event.key === "Enter" && event.ctrlKey && onSubmit()
