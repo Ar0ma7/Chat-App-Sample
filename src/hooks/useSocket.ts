@@ -5,7 +5,9 @@ import { useEffect } from "react";
 import type { Message } from "../../server/types";
 import dayjs from "dayjs";
 
-export const socket = io(import.meta.env.VITE_SERVER_ADDRESS);
+export const socket = io(
+  import.meta.env.VITE_SERVER_ADDRESS || "http://localhost:4000"
+);
 
 export const useSocket = () => {
   const setReceiveMessages = useSetAtom(receiveMessagesAtom);
